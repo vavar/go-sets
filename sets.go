@@ -21,7 +21,7 @@ func (s Set[T]) Add(v T) bool {
 }
 
 func (s Set[T]) Remove(v T) bool {
-	if _, ok := s[v]; ok {
+	if _, ok := s[v]; !ok {
 		return false
 	}
 	delete(s, v)
